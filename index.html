@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Frontend Test</title>
+
+</head>
+<body>
+  <!-- content1 start -->
+
+   <div class="content1">
+
+      <div id="content1-txt">We build successful, long-lasting, profitable products for our clients</div>
+
+
+   <div class="cloud" id="cloud-1">
+     <img src="assets/images/cloud-1.png" alt="cloud-1">
+   </div>
+   <div class="cloud" id="cloud-2">
+     <img src="assets/images/cloud-2.png" alt="cloud-2">
+   </div>
+   <div class="cloud" id="cloud-3">
+     <img src="assets/images/cloud-3.png" alt="cloud-3">
+   </div>
+   <div class="cloud" id="cloud-4">
+     <img src="assets/images/cloud-4.png" alt="cloud-4">
+   </div>
+   <div class="cloud" id="cloud-5">
+     <img src="assets/images/cloud-5.png" alt="cloud-5">
+   </div>
+     <div id="clockdiv">
+
+       <div>
+         <span class="hours"></span>
+         <div class="smalltext">Hours</div>
+       </div>
+       <div>
+         <span class="minutes"></span>
+         <div class="smalltext">Minutes</div>
+       </div>
+       <div>
+         <span class="seconds"></span>
+         <div class="smalltext">Seconds</div>
+       </div>
+     </div>
+     <script>
+       function getTimeRemaining(endtime) {
+       var t = Date.parse(endtime) - Date.parse(new Date());
+       var seconds = Math.floor((t / 1000) % 60);
+       var minutes = Math.floor((t / 1000 / 60) % 60);
+       var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+       var days = Math.floor(t / (1000 * 60 * 60 * 24));
+       return {
+         'total': t,
+         'days': days,
+         'hours': hours,
+         'minutes': minutes,
+         'seconds': seconds
+       };
+     }
+
+     function initializeClock(id, endtime) {
+       var clock = document.getElementById(id);
+       var daysSpan = clock.querySelector('.days');
+       var hoursSpan = clock.querySelector('.hours');
+       var minutesSpan = clock.querySelector('.minutes');
+       var secondsSpan = clock.querySelector('.seconds');
+
+       function updateClock() {
+         var t = getTimeRemaining(endtime);
+
+
+         hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+         minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+         secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+         if (t.total <= 0) {
+           clearInterval(timeinterval);
+         }
+       }
+
+       updateClock();
+       var timeinterval = setInterval(updateClock, 1000);
+     }
+
+     var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
+     initializeClock('clockdiv', deadline);
+     </script>
+  <div class="submit" id="submit1">
+    <input type="submit" name="" value="Get Started">
+ </div>
+<div class="content1" id="content1-img">
+  <img id="hill" src="assets/images/hill.png" height="400px" width="1500px" alt="Hill">
+</div>
+</div>
+  <!-- content1 end -->
+  <!-- content2 start -->
+  <div class="content2">
+    <div class="content2" id="content2-img1">
+      <img src="assets/images/feature1.jpg" height="370px" width="500px" alt="feature1">
+   </div>
+   <div  class="content2" id="content-text" style="height:500px">
+   <div  class="content2" id="content2-text1">
+     We build successful,long-lasting.
+   </div>
+   <div class="content2" id="content2-text2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable
+   <br>
+   <br>
+   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable
+   </div>
+     <div class="submit" id="submit2">
+      <input type="submit" value="Get Started">
+    </div>
+   </div>
+  </div>
+  <!-- content2 end -->
+   <!-- content3 start -->
+   <div class="content3">
+     <div class="content3" id="content3-img1">
+       <img src="assets/images/feature2.png" height="390px" width="500px" alt="feature2">
+    </div>
+    <div  class="content3" id="content3-text" style="height:500px">
+      <div  class="content3" id="content3-text1">
+        We build successful,long-lasting.
+      </div>
+      <div class="content3" id="content3-text2">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable
+      <br>
+      <br>
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable
+      </div>
+      <div class="submit" id="submit3">
+       <input type="submit" value="Get Started">
+     </div>
+
+    </div>
+   </div>
+   <!-- content3 end -->
+
+
+   <!-- content4 start -->
+   <div class="container">
+     <div class="content4">
+       <div id="content4txt1">
+         Carousel
+       </div>
+       <div id="content4txt2">
+         It is a long established fact that a reader will be distracted by the readable conten when looking at its layout. The point of using Lorem Ipsum is that
+       </div>
+       <div class="person1">
+         <img src="assets/images/person1.png" alt="person1">
+       </div>
+       <div class="person2">
+         <img src="assets/images/person2.png" alt="person2">
+         <div class="person2txt">
+           <div class="person2txt1">
+             <p>Yi Chun-Hwa</p>
+           </div>
+           <div class="person2txt1">
+             Business Developer
+           </div>
+         </div>
+       </div>
+       <div class="person3">
+         <img src="assets/images/person3.png" alt="person3">
+       </div>
+     </div>
+  </div>
+  <!-- content4 end -->
+
+
+
+</body>
+</html>
