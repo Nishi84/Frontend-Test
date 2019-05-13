@@ -303,35 +303,35 @@ margin-top:20px;
 .person2{
   width: 353px;
   height: 401px;
-  position: relative;
+  position: absolute;
   left: 580px;
-  top:294px;
-  display: inline-block;
+  top:2100px;
 }
 
-    .person2txt{
-        text-indent: 30px;
+    .persontxt{
         position: absolute;
         top: 72.5%;
-        opacity:0.9;
-        background: #fff;
         color: #000;
         width: 353px;
         height: 110px;
+        font-family: Helvetica;
+        font-size: 18px;
+        line-height: 12px;
+        background-color: #fff;
+        padding-top: 8%;
+        padding-left: 6%;
+        display: block;
+        transition: .5s ease;
+        opacity:0;
     }
-    .person2txt1 p{
-        position:relative;
-        width:150px;
-        height:26px;
-        font-size:18px;
-        line-height:22px;
+    .person1:hover .persontxt,.person2:hover .persontxt,.person3:hover .persontxt {
+        opacity:0.9;
     }
-    .person2txt2{
-        position:relative;
-        width:124px;
+
+    .persontxt p{
+        width:130px;
         height:10px;
-        font-size:16px;
-        line-height:19px;
+        font-size:12px;
     }
 
 .person3{
